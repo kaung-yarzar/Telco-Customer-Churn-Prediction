@@ -13,7 +13,7 @@ the model via an API and a web UI.**
 
 ```
 .
-├── Data                   # Dataset
+├── Data                  # Dataset
 ├── Churn_Predict.ipynb   # Data analysis & model training notebook
 ├── app.py                # FastAPI prediction API (JSON endpoint)
 ├── streamlit_app.py      # Streamlit web UI (interactive form)
