@@ -13,7 +13,8 @@ the model via an API and a web UI.**
 
 ```
 .
-├── analysis.ipynb        # Data analysis & model training notebook
+├── Data                   # Dataset
+├── Churn_Predict.ipynb   # Data analysis & model training notebook
 ├── app.py                # FastAPI prediction API (JSON endpoint)
 ├── streamlit_app.py      # Streamlit web UI (interactive form)
 ├── churn_model.joblib    # Trained model (created by the notebook)
