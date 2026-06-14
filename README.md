@@ -75,7 +75,7 @@ charts, tenure/charges histograms split by churn, and a correlation chart.
 
 ## 2. Model Training
 
-A scikit-learn **Pipeline** is used so preprocessing and the model travel
+A scikit-learn **Pipeline** is used so preprocessing and the model
 together:
 
 ```
@@ -104,7 +104,7 @@ false alarm, so the model is tuned to catch ~77% of actual churners.
 
 ## 3. Prediction API (`app.py`)
 
-A **FastAPI** service that loads `churn_model.joblib` and serves predictions.
+A **FastAPI** service loads `churn_model.joblib` and serves predictions.
 
 **Run it**
 ```bash
@@ -118,7 +118,7 @@ uvicorn app:app --reload
 | `GET`  | `/health`  | Liveness check |
 | `POST` | `/predict` | Predict churn for one customer |
 
-Interactive docs (auto-generated): **http://127.0.0.1:8000/docs**
+Interactive docs: **http://127.0.0.1:8000/docs**
 
 **Example request**
 ```bash
@@ -150,15 +150,13 @@ clear `422` error before reaching the model.
 
 ## 4. Web UI (`streamlit_app.py`)
 
-A **Streamlit** app for testing the model through a form — useful for non-technical
-users (e.g. a retention team).
+A **Streamlit** app for testing the model through a form.
 
 ```bash
 streamlit run streamlit_app.py
 ```
 
-Fill in the customer's details, click **Predict**, and see the churn probability
-and a colour-coded risk band (low / medium / high).
+Fill in the customer's details, click **Predict**, and see the churn probability risk band (low / medium / high).
 
 ---
 
@@ -169,9 +167,9 @@ and a colour-coded risk band (low / medium / high).
 
 ---
 
-## Notes / future improvements
+## Future improvements
 
-For a production deployment, the following would be added:
+In Future, the following would be added:
 - Model versioning and a model registry.
 - Monitoring for **data drift** (churn patterns change over time) and scheduled
   retraining.
